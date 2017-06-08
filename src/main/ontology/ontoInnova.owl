@@ -1,0 +1,647 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.weateu.eu/ontology/ontoInnova#"
+     xml:base="http://www.weateu.eu/ontology/ontoInnova"
+     xmlns:schema="http://schema.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:frapo="http://purl.org/cerif/frapo/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:gr="http://purl.org/goodrelations/v1#"
+     xmlns:cerro="http://purl.org/cerif/cerro/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oin="http://www.weateu.eu/ontology/ontoInnova#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:owl1="http://purl.org/cerif/frapo/owl:"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.weateu.eu/ontology/ontoInnova">
+        <owl:versionIRI rdf:resource="http://www.weateu.eu/ontology/ontoInnova/1.0.0"/>
+        <owl:imports rdf:resource="https://www.w3.org/ns/prov-o"/>
+        <owl:imports rdf:resource="http://purl.org/cerif/frapo/"/>
+        <owl:imports rdf:resource="http://purl.org/goodrelations/v1"/>
+        <dc:title xml:lang="en">The Innovation Ontology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#embodies -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#embodies">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#InnovationProduct"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#InnovationConcept"/>
+        <rdfs:label xml:lang="en">embodies (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#grantedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#grantedBy">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#License"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#IntellectualRightsProperty"/>
+        <rdfs:label xml:lang="en">granted by (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#hasAsset -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#hasAsset">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Agent"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Entity"/>
+        <rdfs:label xml:lang="en">has asset (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#hasPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#hasPurpose">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#ResearchLine"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#ResearchTopic"/>
+        <rdfs:label xml:lang="en">has purpose (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#hasUnit">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Organization"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#OrganizationalUnit"/>
+        <rdfs:label xml:lang="en">has unit (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#includedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#includedIn">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Entity"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#ResearchTopic"/>
+        <rdfs:label xml:lang="en">included in (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#includesAsset -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#includesAsset">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Project"/>
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#ResearchLine"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Entity"/>
+        <rdfs:label xml:lang="en">includes asset (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#licensee -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#licensee">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#BusinessEntity"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#License"/>
+        <rdfs:label xml:lang="en">licensee (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#licensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#licensor">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#BusinessEntity"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#License"/>
+        <rdfs:label xml:lang="en">licensor (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#manifestedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#manifestedBy">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#IntellectualRightsProperty"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Document"/>
+        <rdfs:label xml:lang="en">manifested by (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#member -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#member">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Agent"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Membership"/>
+        <rdfs:label xml:lang="en">member (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#owns -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#owns">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#BusinessEntity"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#ProductOrService"/>
+        <rdfs:label xml:lang="en">owns (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#pointOfContact -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#pointOfContact">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Agent"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#PointOfContact"/>
+        <rdfs:label xml:lang="en">point of contact (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#primaryTopic -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#primaryTopic">
+        <rdfs:subPropertyOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#topic"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">primary topic (0..1)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#purpose -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#purpose">
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Activity"/>
+        <rdfs:label xml:lang="en">purpose (0..1)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#target -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#target">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">target (0..1)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#topic -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#topic">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Document"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#Entity"/>
+                    <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#ResearchTopic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">topic (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#work -->
+
+    <owl:ObjectProperty rdf:about="http://www.weateu.eu/ontology/ontoInnova#work">
+        <rdfs:domain rdf:resource="http://www.weateu.eu/ontology/ontoInnova#License"/>
+        <rdfs:range rdf:resource="http://www.weateu.eu/ontology/ontoInnova#ProductOrService"/>
+        <rdfs:label xml:lang="en">work (0..*)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/cerif/frapo/Funding -->
+
+    <rdf:Description rdf:about="http://purl.org/cerif/frapo/Funding">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Funding"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/FundingAgency -->
+
+    <rdf:Description rdf:about="http://purl.org/cerif/frapo/FundingAgency">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#FundingAgency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#BusinessEntity -->
+
+    <rdf:Description rdf:about="http://purl.org/goodrelations/v1#BusinessEntity">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#BusinessEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#BusinessEntityType -->
+
+    <rdf:Description rdf:about="http://purl.org/goodrelations/v1#BusinessEntityType">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#BusinessEntityType"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#BusinessFunction -->
+
+    <rdf:Description rdf:about="http://purl.org/goodrelations/v1#BusinessFunction">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#BusinessFunction"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#License -->
+
+    <rdf:Description rdf:about="http://purl.org/goodrelations/v1#License">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#License"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#Offering -->
+
+    <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Offering">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Offering"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://schema.org/Organization -->
+
+    <rdf:Description rdf:about="http://schema.org/Organization">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Organization"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <rdf:Description rdf:about="http://schema.org/Person">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Person"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Activity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Agent">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Agent"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Entity">
+        <owl:equivalentClass rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Entity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Activity -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Activity">
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Agent -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Agent">
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#BusinessEntity -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#BusinessEntity">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Agent"/>
+        <rdfs:label xml:lang="en">Business entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#BusinessEntityType -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#BusinessEntityType">
+        <rdfs:label xml:lang="en">Business entity type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#BusinessFunction -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#BusinessFunction">
+        <rdfs:label xml:lang="en">Business function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Document -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Document">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#ProductOrService"/>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Entity -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Entity">
+        <rdfs:label xml:lang="en">Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Funding -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Funding">
+        <rdfs:label xml:lang="en">Funding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#FundingAgency -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#FundingAgency">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Organization"/>
+        <rdfs:label xml:lang="en">Funding agency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Innovation -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Innovation">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#ProductOrService"/>
+        <rdfs:label xml:lang="en">Innovation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#InnovationConcept -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#InnovationConcept">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Innovation"/>
+        <owl:disjointWith rdf:resource="http://www.weateu.eu/ontology/ontoInnova#InnovationProduct"/>
+        <rdfs:label xml:lang="en">Innovation concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#InnovationProduct -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#InnovationProduct">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Innovation"/>
+        <rdfs:label xml:lang="en">Innovation product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#IntellectualRightsProperty -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#IntellectualRightsProperty">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#ProductOrService"/>
+        <rdfs:label xml:lang="en">Intellectual rights property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#License -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#License">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#BusinessFunction"/>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Membership -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Membership">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.weateu.eu/ontology/ontoInnova#purpose"/>
+                        <owl:allValuesFrom rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Activity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.weateu.eu/ontology/ontoInnova#target"/>
+                        <owl:allValuesFrom rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Organization"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Membership</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Offering -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Offering">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Activity"/>
+        <rdfs:label xml:lang="en">Offering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Organization -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Agent"/>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#OrganizationalUnit -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#OrganizationalUnit">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Organization"/>
+        <rdfs:label xml:lang="en">Organizational unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Person -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Person">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Agent"/>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#PointOfContact -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#PointOfContact">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.weateu.eu/ontology/ontoInnova#purpose"/>
+                        <owl:allValuesFrom rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Activity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.weateu.eu/ontology/ontoInnova#target"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#Activity"/>
+                                    <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#Agent"/>
+                                    <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#Entity"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Point of contact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#ProductOrService -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#ProductOrService">
+        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrService"/>
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Entity"/>
+        <rdfs:label xml:lang="en">Product or service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#Project -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#Project">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Entity"/>
+        <rdfs:label xml:lang="en">Project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#ResearchLine -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#ResearchLine">
+        <rdfs:subClassOf rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Entity"/>
+        <rdfs:label xml:lang="en">Research line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#ResearchTopic -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#ResearchTopic">
+        <rdfs:label xml:lang="en">Research topic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.weateu.eu/ontology/ontoInnova#SubUnit -->
+
+    <owl:Class rdf:about="http://www.weateu.eu/ontology/ontoInnova#SubUnit">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.weateu.eu/ontology/ontoInnova#purpose"/>
+                        <owl:allValuesFrom rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Activity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.weateu.eu/ontology/ontoInnova#target"/>
+                        <owl:allValuesFrom rdf:resource="http://www.weateu.eu/ontology/ontoInnova#Organization"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Sub Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#Document"/>
+            <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#Innovation"/>
+            <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#IntellectualRightsProperty"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#ProductOrService"/>
+            <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#Project"/>
+            <rdf:Description rdf:about="http://www.weateu.eu/ontology/ontoInnova#ResearchLine"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

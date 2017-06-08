@@ -1,0 +1,9 @@
+
+
+
+task widoco(type: JavaExec) {
+    String jarPath = relativePath(new File("widoco", "widoco-1.4.1-jar-with-dependencies.jar"))
+    main = '-jar'
+    args jarPath, '-ontFile', 'src/main/ontology/ontoInnova.owl', '-outFolder', 'docs',  '-rewriteAll'
+}
+
